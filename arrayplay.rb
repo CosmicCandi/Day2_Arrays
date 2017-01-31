@@ -3,7 +3,7 @@
 our_class = ["Ron", "David", "Nancy", "Kalea", "Laura", "Dave", "Demetra", "Phil",
 "Ben", "Kendrick", "Michael", "Miguel"]
 
-#Explorer Mode
+### Explorer Mode ###
 #Find all students whose name is less than 5 characters
 #Looking for Ron, Dave, Phil, and Ben to be printed
 puts "These students have names with less than 5 characters:"
@@ -19,6 +19,9 @@ sentence_array = sentence.split
 
 #Debugging to see if above code split the sentence properly
 #  puts sentence_array
+
+#Add an empty Line
+puts "\n"
 
 puts "These words have a length less than 4:"
 sentence_array.each do |smallwords|
@@ -56,6 +59,9 @@ movies << {
   stars: ["Leonardo DiCaprio", "JGL"]
 }
 
+#Add an empty Line
+puts "\n"
+
 #Create an array for movies with a budget less than 100
 puts "The following movies have a budget less than 100:"
 budget100 = []
@@ -66,7 +72,13 @@ movies.each do |budget|
   end
 end
 
+#Add an empty Line
+puts "\n"
+
 puts "This is the Budget100 Array:\n #{budget100}"
+
+#Add an empty Line
+puts "\n"
 
 #Create an array for movies starring Leonardo DiCaprio
 puts "The following movies starred Leonardo DiCaprio: "
@@ -78,6 +90,55 @@ movies.each do |leo|
   end
 end
 
-puts "This is the arrayDiLeo: \n #{arrayDiLeo}"
+#Add an empty Line
+puts "\n"
 
+puts "This is the arrayDiLeo: \n #{arrayDiLeo}"
 #Output all answers to the above into the Command Line
+
+## Adventure Mode ##
+#Create a method that will always return words in a string that contain 4 letters
+def four_words(text)
+  sentence = "Ruby is actually kind of fun once you get used to it."
+  sentence_array = sentence.split
+  sentence_array.each do |smallwords|
+    if smallwords.length == 4
+      puts smallwords
+    end
+  end
+end
+
+#Add an empty Line
+puts "\n"
+
+puts "Prepare for output from the four_words method!"
+four_words(sentence)
+
+#Make a method that will return the words in a string that are x characters Looking
+def how_many_words(text, num)
+  sentence = "Ruby is actually kind of fun once you get used to it."
+  sentence_array = sentence.split
+  sentence_array.each do |xwords|
+    if xwords.length == num
+      puts xwords
+    end
+  end
+end
+
+#Add an empty Line
+puts "\n"
+
+puts "Prepare for output from the how_many_words method:"
+how_many_words(sentence, 2)
+
+#Add an empty Line
+puts "\n"
+
+#Get the total budget of all of our movies
+puts "Now we'll get the budget total for all of the movies..."
+budget_total = 0
+movies.each do |moviebudget|
+   budget_total += moviebudget[:budget]
+ end
+
+puts "The total budget of all movies is: #{budget_total}! Wow!"
