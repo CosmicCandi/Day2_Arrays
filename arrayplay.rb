@@ -29,4 +29,55 @@ end
 
 #Create an array of movies with budgets less than 100, another array of movies that
 #starred Leonardo DiCaprio
+movies = []
+movies << {
+  title: "Forest Gump",
+  budget: 55,
+  stars: ["Tom Hanks"]
+}
+movies << {
+  title: "Star Wars",
+  budget: 11,
+  stars: ["Mark Hamill", "Harrison Ford"]
+}
+movies << {
+  title: "Batman Begins",
+  budget: 150,
+  stars: ["Christian Bale", "Liam Neeson", "Michael Caine"]
+}
+movies << {
+  title: "Titanic",
+  budget: 200,
+  stars: ["Kate Winslet", "Leonardo DiCaprio"]
+}
+movies << {
+  title: "Inception",
+  budget: 160,
+  stars: ["Leonardo DiCaprio", "JGL"]
+}
+
+#Create an array for movies with a budget less than 100
+puts "The following movies have a budget less than 100:"
+budget100 = []
+movies.each do |budget|
+  if budget[:budget] < 100
+    puts budget[:title]
+    budget100 << budget[:title]
+  end
+end
+
+puts "This is the Budget100 Array:\n #{budget100}"
+
+#Create an array for movies starring Leonardo DiCaprio
+puts "The following movies starred Leonardo DiCaprio: "
+arrayDiLeo = []
+movies.each do |leo|
+  if leo[:stars].include? "Leonardo DiCaprio"
+    puts leo[:title]
+    arrayDiLeo << leo[:title]
+  end
+end
+
+puts "This is the arrayDiLeo: \n #{arrayDiLeo}"
+
 #Output all answers to the above into the Command Line
