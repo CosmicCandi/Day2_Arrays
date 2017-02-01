@@ -121,6 +121,7 @@ def how_many_words(text, num)
   sentence_array.each do |xwords|
     if xwords.length == num
       puts xwords
+      #puts "We're sorry, none of the words matched your requested length."
     end
   end
 end
@@ -128,8 +129,8 @@ end
 #Add an empty Line
 puts "\n"
 
-puts "Prepare for output from the how_many_words method:"
-how_many_words(sentence, 2)
+puts "Prepare for output from the how_many_words method!"
+how_many_words(sentence, 3)
 
 #Add an empty Line
 puts "\n"
@@ -142,3 +143,21 @@ movies.each do |moviebudget|
  end
 
 puts "The total budget of all movies is: #{budget_total}! Wow!"
+
+#Add an empty Line
+puts "\n"
+
+### Epic Mode ENGAGE! ###
+#RE: Movies Array, produce an array grouped by each star
+star_array = []
+movies.each do |star|
+  star_array << star[:stars]
+  star_array.flatten!(1)
+  star_array.uniq!
+end
+
+#movies.each do |movie|
+#if star_arr
+#end
+
+puts "This is the contents of the star_array: #{star_array}"
