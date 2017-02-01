@@ -156,8 +156,33 @@ movies.each do |star|
   star_array.uniq!
 end
 
-#movies.each do |movie|
-#if star_arr
-#end
-
 puts "This is the contents of the star_array: #{star_array}"
+
+#Add an empty Line
+puts "\n"
+
+#Calculate the average of movie budgets
+average = 0
+averagecounter = movies.count
+movies.each do |avgtotal|
+  #Used for Average Division
+  average += avgtotal[:budget]
+  #Puts Debugging to see the values held by average
+  #puts "average is at: #{average} \n"
+end
+
+averagetotal = average / averagecounter
+puts "The total average budget calculation is: #{average} divided by #{averagecounter}
+= $#{averagetotal}"
+
+#Add an empty Line
+puts "\n"
+
+#Calculate the median budget
+mediantotal = 0
+movies.each do |budgetmedian|
+median = []
+median << budgetmedian[:budget]
+#Unable to get Sort working.  Ending for the night
+puts median.sort!
+end
