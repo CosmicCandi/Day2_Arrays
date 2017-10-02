@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-our_class = ["Ron", "David", "Nancy", "Kalea", "Laura", "Dave", "Demetra", "Phil",
+our_class = ["Rob", "David", "Nancy", "Kalea", "Laura", "Dave", "Demetra", "Phil",
 "Ben", "Kendrick", "Michael", "Miguel"]
 
 ### Explorer Mode ###
